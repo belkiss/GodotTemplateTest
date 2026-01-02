@@ -29,6 +29,6 @@ jobs:
           commit_message: "docs(deps): updated changelog"
 
       # Enforces the update of a changelog file on every pull request
-      - uses: dangoslen/changelog-enforcer@v3
+      - uses: dangoslen/changelog-enforcer@v3.6.1
         with:
           skipLabels: "autocut, skip-changelog"
