@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       # lychee is a fast, asynchronous link checker which detects broken URLs and mail addresses in local files
       - name: lychee Link Checker
