@@ -29,7 +29,7 @@ parts:
     override-build: |
       snapcraftctl build
 
-      cp ${SNAPCRAFT_PART_SRC}/public/packaging/org.mechanicalflower.Greeter.desktop ${SNAPCRAFT_PART_INSTALL}/org.mechanicalflower.Greeter.desktop
+      cp ${SNAPCRAFT_PART_SRC}/GodotTemplateTest-90b941f4ddce4fde56e125959cd23fa3bab8a057/public/packaging/org.mechanicalflower.Greeter.desktop ${SNAPCRAFT_PART_INSTALL}/org.mechanicalflower.Greeter.desktop
 
       # Icon paths in the desktop file will be rewritten to use ${SNAP}/<file> if specified as desktop file in snapcraft.yaml
       sed -i -e "s|Icon=org.mechanicalflower.Greeter$|Icon=gui/icon.png|g" ${SNAPCRAFT_PART_INSTALL}/org.mechanicalflower.Greeter.desktop
@@ -39,7 +39,7 @@ parts:
       snapcraftctl prime
 
       mkdir -p ${SNAPCRAFT_PRIME}/gui
-      cp ${SNAPCRAFT_PART_SRC}/assets/icon.png ${SNAPCRAFT_PRIME}/gui/icon.png
+      cp ${SNAPCRAFT_PART_SRC}/GodotTemplateTest-90b941f4ddce4fde56e125959cd23fa3bab8a057/assets/icon.png ${SNAPCRAFT_PRIME}/gui/icon.png
   greeter-dist:
     source: https://github.com/MechanicalFlower/godot-template/releases/download/0.1.0/Greeter-linux-v0.1.0.zip
     override-build: |
