@@ -1,8 +1,7 @@
-
 ---
 name: godot-template
 base: core20
-version: '0.1.0'
+version: "0.1.0"
 summary: A greeter race minigame
 description: |
   A greeter race minigame, made with Godot Engine.

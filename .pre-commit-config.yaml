@@ -1,101 +1,101 @@
 ci:
   autofix_prs: false
-  autoupdate_commit_msg: 'chore(deps): Bump pre-commit hooks'
+  autoupdate_commit_msg: "chore(deps): Bump pre-commit hooks"
   autoupdate_schedule: weekly
   skip: [format-shaders]
 
 repos:
-- repo: https://github.com/executablebooks/mdformat
-  # Do this before other tools "fixing" the line endings
-  rev: 1.0.0
-  hooks:
-  - id: mdformat
-    name: Format Markdown
-    entry: mdformat # Executable to run, with fixed options
-    language: python
-    types: [markdown]
-    args: [--number]
-    additional_dependencies:
-    - mdformat-toc
-    - mdformat-beautysh
-    # -mdformat-shfmt
-    # -mdformat-tables
-    - mdformat-config
-    - mdformat-black
-    - mdformat-web
-    - mdformat-gfm
-- repo: https://github.com/Lucas-C/pre-commit-hooks-markup
-  rev: v1.0.1
-  hooks:
-  - id: rst-linter
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v6.0.0
-  hooks:
-  - id: check-added-large-files # Prevent giant files from being committed
-    args: ['--maxkb=1500']
-  - id: fix-byte-order-marker   # Prevents weird UTF-8 encoding edge cases
-  - id: check-case-conflict     # Check if case-insensitive filesystems would bork
-  - id: check-docstring-first   # Check for if docstring was misplaced
-  - id: check-executables-have-shebangs
-  - id: check-illegal-windows-names
-  - id: check-json              # Checks for valid json
-  - id: check-merge-conflict    # Checks strings that look like a committed merge conflict
-  - id: check-shebang-scripts-are-executable
-  - id: check-symlinks
-  - id: check-toml
-  - id: check-vcs-permalinks
-  - id: check-xml               # Checks for valid xml
-  - id: check-yaml              # Checks for valid yaml
-  - id: destroyed-symlinks
-  - id: detect-private-key
-  - id: end-of-file-fixer       # Checks for ending with a newline
-  - id: fix-byte-order-marker
-  - id: mixed-line-ending       # Consistent LF or CRLF
-  - id: trailing-whitespace     # No trailing whitespace
-- repo: https://github.com/fsfe/reuse-tool
-  rev: v6.2.0
-  hooks:
-  - id: reuse
-- repo: https://github.com/codespell-project/codespell
-  rev: v2.4.1
-  hooks:
-  - id: codespell
-- repo: https://github.com/Scony/godot-gdscript-toolkit
-  rev: 4.5.0
-  hooks:
-  - id: gdformat
-    exclude: '^addons/gd-plug/'
-  - id: gdlint
-    exclude: '^addons/gd-plug/'
-- repo: local
-  hooks:
-  - id: check-filenames-are-lowercase
-    name: check that filenames are lowercase
-    entry: filenames must be lower-case or lower_case only
-    language: fail
-    files: '[^a-z0-9._/-]'
-    exclude: |
-      (?x)^(
-          .godot/|
-          .reuse/|
-          addons/gd-plug/|
-          CHANGELOG.md|
-          CONTRIBUTING.md|
-          CREDITS.md|
-          Justfile|
-          LICENSE.md|
-          LICENSES/|
-          public/|
-          README.md|
-          RELEASING.md
-      )
-  - id: format-shaders
-    name: format shaders
-    entry: clang-format
-    args:
-      - --style=llvm
-      - -Werror
-      - -i
-    language: system
-    files: \.gdshader$
-    exclude: ^addons/gd-plug/
+  - repo: https://github.com/executablebooks/mdformat
+    # Do this before other tools "fixing" the line endings
+    rev: 1.0.0
+    hooks:
+      - id: mdformat
+        name: Format Markdown
+        entry: mdformat # Executable to run, with fixed options
+        language: python
+        types: [markdown]
+        args: [--number]
+        additional_dependencies:
+          - mdformat-toc
+          - mdformat-beautysh
+          # -mdformat-shfmt
+          # -mdformat-tables
+          - mdformat-config
+          - mdformat-black
+          - mdformat-web
+          - mdformat-gfm
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
+    rev: v1.0.1
+    hooks:
+      - id: rst-linter
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files # Prevent giant files from being committed
+        args: ["--maxkb=1500"]
+      - id: fix-byte-order-marker # Prevents weird UTF-8 encoding edge cases
+      - id: check-case-conflict # Check if case-insensitive filesystems would bork
+      - id: check-docstring-first # Check for if docstring was misplaced
+      - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
+      - id: check-json # Checks for valid json
+      - id: check-merge-conflict # Checks strings that look like a committed merge conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: check-xml # Checks for valid xml
+      - id: check-yaml # Checks for valid yaml
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer # Checks for ending with a newline
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending # Consistent LF or CRLF
+      - id: trailing-whitespace # No trailing whitespace
+  - repo: https://github.com/fsfe/reuse-tool
+    rev: v6.2.0
+    hooks:
+      - id: reuse
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+  - repo: https://github.com/Scony/godot-gdscript-toolkit
+    rev: 4.5.0
+    hooks:
+      - id: gdformat
+        exclude: "^addons/gd-plug/"
+      - id: gdlint
+        exclude: "^addons/gd-plug/"
+  - repo: local
+    hooks:
+      - id: check-filenames-are-lowercase
+        name: check that filenames are lowercase
+        entry: filenames must be lower-case or lower_case only
+        language: fail
+        files: "[^a-z0-9._/-]"
+        exclude: |
+          (?x)^(
+              .godot/|
+              .reuse/|
+              addons/gd-plug/|
+              CHANGELOG.md|
+              CONTRIBUTING.md|
+              CREDITS.md|
+              Justfile|
+              LICENSE.md|
+              LICENSES/|
+              public/|
+              README.md|
+              RELEASING.md
+          )
+      - id: format-shaders
+        name: format shaders
+        entry: clang-format
+        args:
+          - --style=llvm
+          - -Werror
+          - -i
+        language: system
+        files: \.gdshader$
+        exclude: ^addons/gd-plug/
