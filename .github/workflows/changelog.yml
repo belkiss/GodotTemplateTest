@@ -5,11 +5,24 @@ on:
     types: [opened, edited, review_requested, synchronize, reopened, ready_for_review, labeled, unlabeled]
 
 jobs:
-  # Enforces the update of a changelog file on every pull request
-  verify-changelog:
+  changelog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+
+      # Automatically update changelog on Dependabot pull requests
+      - uses: dangoslen/dependabot-changelog-helper@v3
+        with:
+          activationLabels: dependencies # run on any pull request labeled with dependencies (which is added by Dependabot as a default)
+          dependencyTool: dependabot
+
+      # This step is required for committing the changes to your branch.
+      # See https://github.com/stefanzweifel/git-auto-commit-action#commits-of-this-action-do-not-trigger-new-workflow-runs
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs(deps): updated changelog"
+
+      # Enforces the update of a changelog file on every pull request
       - uses: dangoslen/changelog-enforcer@v3
         with:
           skipLabels: "autocut, skip-changelog"
