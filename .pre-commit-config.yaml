@@ -14,11 +14,19 @@ repos:
   - id: check-case-conflict     # Check if case-insensitive filesystems would bork
   - id: check-docstring-first   # Check for if docstring was misplaced
   - id: check-executables-have-shebangs
+  - id: check-illegal-windows-names
   - id: check-json              # Checks for valid json
   - id: check-merge-conflict    # Checks strings that look like a committed merge conflict
+  - id: check-shebang-scripts-are-executable
+  - id: check-symlinks
+  - id: check-toml
+  - id: check-vcs-permalinks
   - id: check-xml               # Checks for valid xml
   - id: check-yaml              # Checks for valid yaml
+  - id: destroyed-symlinks
+  - id: detect-private-key
   - id: end-of-file-fixer       # Checks for ending with a newline
+  - id: fix-byte-order-marker
   - id: mixed-line-ending       # Consistent LF or CRLF
   - id: trailing-whitespace     # No trailing whitespace
 - repo: https://github.com/fsfe/reuse-tool
