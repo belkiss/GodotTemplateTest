@@ -29,10 +29,11 @@ parts:
     override-build: |
       snapcraftctl build
 
-      # Icon paths in the desktop file will be rewritten to use ${SNAP}/<file> if specified as desktop file in snapcraft.yaml
-      sed -i.bak -e "s|Icon=org.mechanicalflower.Greeter$|Icon=gui/icon.png|g" ${SNAPCRAFT_PART_SRC}/public/packaging/org.mechanicalflower.Greeter.desktop
-
       cp ${SNAPCRAFT_PART_SRC}/public/packaging/org.mechanicalflower.Greeter.desktop ${SNAPCRAFT_PART_INSTALL}/org.mechanicalflower.Greeter.desktop
+
+      # Icon paths in the desktop file will be rewritten to use ${SNAP}/<file> if specified as desktop file in snapcraft.yaml
+      sed -i -e "s|Icon=org.mechanicalflower.Greeter$|Icon=gui/icon.png|g" ${SNAPCRAFT_PART_INSTALL}/org.mechanicalflower.Greeter.desktop
+
     plugin: nil
     override-prime: |
       snapcraftctl prime
