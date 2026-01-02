@@ -23,7 +23,7 @@ jobs:
       - name: Load dotenv
         run: just ci-load-dotenv
 
-      - name: Load dotenv
+      - name: Update version
         run: just bump-version
 
       - name: Install pkg2image dependencies
