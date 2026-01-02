@@ -14,3 +14,4 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Dependencies
 
 [Unreleased]: https://github.com/MechanicalFlower/godot-template/compare/0.1.0...HEAD
+- Bump `actions/upload-artifact` from 5 to 6 ([#1](https://github.com/belkiss/GodotTemplateTest/pull/1))
