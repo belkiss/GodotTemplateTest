@@ -14,7 +14,7 @@ A template to create new [Godot Engine](https://godotengine.org/) project.
 ## Features
 
 - Clean separation of assets, resources, scenes, scripts and shaders code
-- Continuous integration via [GitHub Actions](https://help.github.com/en/actions/)
+- Continuous integration via [GitHub Actions](https://docs.github.com/en/actions)
 - Code formatting enforced by [gdformat](https://github.com/Scony/godot-gdscript-toolkit) for gdscript code, and [clang-format](https://clang.llvm.org/docs/ClangFormat.html) for shaders, via [pre-commit](https://github.com/pre-commit/pre-commit)
 - Keep track of licenses and attribution by following the [reuse specification](https://reuse.software/spec/)
 - Addons management with [gd-plug](https://github.com/imjp94/gd-plug)
@@ -26,7 +26,7 @@ A template to create new [Godot Engine](https://godotengine.org/) project.
 
 ### Adjust the template to your needs
 
-- Use this repo [as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+- Use this repo [as a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 - Replace all occurrences of "Greeter" with the name of your project
 - Replace files with your own
 - Happy coding!
