@@ -25,7 +25,7 @@ apps:
 
 parts:
   greeter-source:
-    source: https://github.com/MechanicalFlower/godot-template/archive/refs/tags/0.1.0.tar.gz
+    source: https://github.com/belkiss/GodotTemplateTest/archive/90b941f4ddce4fde56e125959cd23fa3bab8a057.zip
     override-build: |
       snapcraftctl build
 
