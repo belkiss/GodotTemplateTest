@@ -22,8 +22,8 @@ ingredients:
     - wget -c "https://github.com/MechanicalFlower/godot-template/releases/download/0.1.0/Greeter-linux-v0.1.0.zip"
     - unzip *.zip
     # Download the icon and the .desktop file
-    - wget -c "https://raw.githubusercontent.com/MechanicalFlower/godot-template/0.1.0/public/packaging/org.mechanicalflower.Greeter.desktop"
-    - wget -c "https://raw.githubusercontent.com/MechanicalFlower/godot-template/0.1.0/assets/icon.png"
+    - wget -c "https://raw.githubusercontent.com/belkiss/GodotTemplateTest/90b941f4ddce4fde56e125959cd23fa3bab8a057/public/packaging/org.mechanicalflower.Greeter.desktop"
+    - wget -c "https://raw.githubusercontent.com/belkiss/GodotTemplateTest/90b941f4ddce4fde56e125959cd23fa3bab8a057/assets/icon.png"
 
 script:
   - sed -i.bak -e "s,Version=.*$,,g" ../org.mechanicalflower.Greeter.desktop
