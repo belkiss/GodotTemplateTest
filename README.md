@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 📝 Greeter
@@ -19,6 +18,7 @@ A template to create new [Godot Engine](https://godotengine.org/) project.
 - Keep track of licenses and attribution by following the [reuse specification](https://reuse.software/spec/)
 - Addons management with [gd-plug](https://github.com/imjp94/gd-plug)
 - Command runner with [just](https://just.systems/man/en/), with a provided `Justfile` that handle tools installation, exporting, publishing ...
+
 <!-- - Integrated test suite -->
 
 ## Usage
@@ -77,16 +77,19 @@ More details on how to run an AppImage, on the
 > the Godot Editor installed.
 
 Clone the source locally:
+
 ```
 git clone https://github.com/MechanicalFlower/godot-template.git
 ```
 
 You need to install addons first:
+
 ```
 godot --headless --script plug.gd install
 ```
 
 And simply run the game as any Godot project:
+
 ```
 godot
 ```
@@ -94,6 +97,7 @@ godot
 ## Development
 
 The project use:
+
 - [`just`](https://just.systems/man/en/) as command runner,
 - [`pre-commit`](https://pre-commit.com/) to run formatters, this requires [Python 3](https://docs.python.org/3/).
 
@@ -101,16 +105,19 @@ The project use:
 > Actually, `just` recipes only support Linux.
 
 To check all available recipes, run:
+
 ```
 just
 ```
 
 To run formatters:
+
 ```
 just fmt
 ```
 
 To install, and run the game:
+
 ```
 just install-addons
 just godot

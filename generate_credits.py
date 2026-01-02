@@ -24,7 +24,8 @@ def main():
                 if section not in deps:
                     deps[section] = []
 
-                deps[section].append({"files": line[len("Files: "):-1]})
+                f = line[len("Files: "):-1].replace("*", "\\*")
+                deps[section].append({"files": f})
 
             elif line.startswith("Copyright: "):
                 if section not in deps:
@@ -51,7 +52,7 @@ def main():
             file.writelines("# Credits\n\n")
 
             for key, value in deps.items():
-                file.writelines(f"## {key.title()}\n")
+                file.writelines(f"## {key.title()}\n\n")
                 for dep in value:
                     file.writelines(template.substitute(**dep))
     else:
