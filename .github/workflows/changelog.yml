@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v5
 
       # Automatically update changelog on Dependabot pull requests
-      - uses: dangoslen/dependabot-changelog-helper@v3
+      - uses: dangoslen/dependabot-changelog-helper@v4.2.1
         with:
           activationLabels: dependencies # run on any pull request labeled with dependencies (which is added by Dependabot as a default)
           dependencyTool: dependabot
