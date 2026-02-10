@@ -24,8 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 ### Dependencies
-
-- Bump `dawidd6/action-download-artifact` from 11 to 12 ([#2](https://github.com/belkiss/GodotTemplateTest/pull/2))
+- Bump `dawidd6/action-download-artifact` from 11 to 14 ([#2](https://github.com/belkiss/GodotTemplateTest/pull/2), [#6](https://github.com/belkiss/GodotTemplateTest/pull/6))
 - Bump `actions/cache` from 4 to 5 ([#5](https://github.com/belkiss/GodotTemplateTest/pull/5))
 - Bump `actions/checkout` from 5 to 6 ([#4](https://github.com/belkiss/GodotTemplateTest/pull/4))
+- Bump `actions/upload-artifact` from 5 to 6 ([#1](https://github.com/belkiss/GodotTemplateTest/pull/1))
 - Bump `actions/upload-artifact` from 5 to 6 ([#1](https://github.com/belkiss/GodotTemplateTest/pull/1))
